@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 20 15% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 15% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 15% 25%;
+    --primary: 340 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 85% 70%;
+    --secondary-foreground: 20 15% 25%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 40 85% 70%;
+    --accent-foreground: 20 15% 25%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 92%;
+    --input: 0 0% 95%;
+    --ring: 340 70% 55%;
+    --chart-1: 340 70% 55%;
+    --chart-2: 40 85% 70%;
+    --chart-3: 0 0% 70%;
+    --chart-4: 340 60% 65%;
+    --chart-5: 40 75% 60%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 20 15% 25%;
+    --sidebar-primary: 340 70% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 85% 70%;
+    --sidebar-accent-foreground: 20 15% 25%;
+    --sidebar-border: 0 0% 92%;
+    --sidebar-ring: 340 70% 55%;
+  }
+  .dark {
+    --background: 20 20% 15%;
+    --foreground: 0 0% 98%;
+    --card: 20 15% 20%;
+    --card-foreground: 0 0% 98%;
+    --popover: 20 15% 20%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 340 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 85% 70%;
+    --secondary-foreground: 20 15% 25%;
+    --muted: 0 0% 30%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 40 85% 70%;
+    --accent-foreground: 20 15% 25%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 340 70% 55%;
+    --chart-1: 340 70% 55%;
+    --chart-2: 40 85% 70%;
+    --chart-3: 0 0% 70%;
+    --chart-4: 340 60% 65%;
+    --chart-5: 40 75% 60%;
+    --sidebar-background: 20 15% 20%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 340 70% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 85% 70%;
+    --sidebar-accent-foreground: 20 15% 25%;
+    --sidebar-border: 0 0% 25%;
+    --sidebar-ring: 340 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
