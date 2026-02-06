@@ -98,13 +98,8 @@ export default function Page() {
                 </button>
               </div>
             </div>
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
-              <div className="w-full h-full bg-gradient-to-br from-primary to-secondary/50 flex items-center justify-center">
-                <div className="text-center text-primary-foreground">
-                  <Sparkles size={64} className="mx-auto mb-4" />
-                  <p className="text-xl font-semibold">Beauty Academy</p>
-                </div>
-              </div>
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl bg-background flex items-center justify-center border border-border">
+              <img src="/logo.png" alt="IRA Beauty Academy Logo" className="h-full w-auto object-contain p-8" />
             </div>
           </div>
         </div>

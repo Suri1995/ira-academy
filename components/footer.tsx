@@ -10,12 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">IRA</span>
-              </div>
-              <span className="font-bold text-lg">IRA Beauty Academy</span>
-            </div>
+            <img src="/logo.png" alt="IRA Beauty Academy" className="h-24 w-auto mb-4" />
             <p className="text-sm opacity-80">
               Transforming passion into professional beauty careers since 2020.
             </p>
