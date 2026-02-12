@@ -78,7 +78,7 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">Visit Us</h3>
               <p className="text-foreground/70 font-semibold">
-                New Delhi, India
+                Chaitanyapuri, Hyderabad, Telangana, India
               </p>
               <p className="text-foreground/60 text-sm mt-2">By appointment</p>
             </div>

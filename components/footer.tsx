@@ -12,7 +12,7 @@ export function Footer() {
           <div>
             <img src="/logo.png" alt="IRA Beauty Academy" className="h-24 w-auto mb-4" />
             <p className="text-sm opacity-80">
-              Transforming passion into professional beauty careers since 2020.
+              Transforming passion into professional beauty careers since 2025.
             </p>
           </div>
 
@@ -49,7 +49,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="tel:+919876543210" className="hover:text-primary transition-colors">
-                  +91 9876 543 210
+                  +91 9876 543 210 /  +91 8142766813
                 </a>
               </li>
               <li>
@@ -58,7 +58,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="text-sm opacity-80">
-                New Delhi, India
+                 Chaitanyapuri, Hyderabad, Telangana, India
               </li>
             </ul>
           </div>

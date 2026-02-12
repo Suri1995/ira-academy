@@ -9,7 +9,6 @@ const courses = [
   {
     title: 'Professional Makeup Course',
     duration: '3 Months',
-    fees: '₹15,000',
     level: 'Beginner to Advanced',
     description: 'Master the art of makeup with our comprehensive professional course. Learn bridal makeup, party makeup, and everyday makeup techniques.',
     curriculum: ['Face Mapping & Contouring', 'Bridal Makeup Techniques', 'Party & Event Makeup', 'Corrective Makeup', 'Color Theory'],
@@ -19,7 +18,6 @@ const courses = [
   {
     title: 'Hair Styling & Hair Dressing',
     duration: '2.5 Months',
-    fees: '₹12,000',
     level: 'Beginner to Intermediate',
     description: 'Become an expert in hair styling and design. Learn cutting, coloring, and styling techniques from industry professionals.',
     curriculum: ['Hair Basics & Health', 'Hair Cutting Techniques', 'Hair Coloring & Trends', 'Styling Techniques', 'Chemical Treatments'],
@@ -29,7 +27,6 @@ const courses = [
   {
     title: 'Skin & Cosmetology',
     duration: '3 Months',
-    fees: '₹14,000',
     level: 'Beginner to Advanced',
     description: 'Learn comprehensive skincare and cosmetology treatments. Master facial techniques and skincare product knowledge.',
     curriculum: ['Skin Biology & Anatomy', 'Facial Treatments', 'Chemical Peels', 'Threading & Waxing', 'Anti-Aging Techniques'],
@@ -39,7 +36,6 @@ const courses = [
   {
     title: 'Nail Art & Extensions',
     duration: '1.5 Months',
-    fees: '₹8,000',
     level: 'Beginner to Intermediate',
     description: 'Master nail art and extension techniques. Learn to create stunning nail designs and apply various extension methods.',
     curriculum: ['Nail Anatomy', 'Basic Nail Art', 'Advanced Designs', 'Gel Extensions', 'Acrylic Application'],
@@ -49,7 +45,6 @@ const courses = [
   {
     title: 'Beautician Course',
     duration: '4 Months',
-    fees: '₹18,000',
     level: 'Beginner to Advanced',
     description: 'Comprehensive beauty training covering makeup, skincare, and nail art. Perfect for aspiring all-round beauty professionals.',
     curriculum: ['Makeup Fundamentals', 'Hair Care', 'Skincare Treatments', 'Nail Care', 'Client Communication'],
@@ -59,7 +54,6 @@ const courses = [
   {
     title: 'Advanced Bridal Makeup',
     duration: '2 Months',
-    fees: '₹10,000',
     level: 'Intermediate to Advanced',
     description: 'Specialize in bridal makeup with advanced techniques. Learn to create stunning bridal looks for different occasions and skin types.',
     curriculum: ['Bridal Makeup Artistry', 'Trial Techniques', 'Product Selection', 'Stain-Resistant Makeup', 'Occasion-Based Styling'],
@@ -69,7 +63,6 @@ const courses = [
   {
     title: 'Short-term Makeup Workshop',
     duration: '1 Month',
-    fees: '₹5,000',
     level: 'Beginner',
     description: 'Quick introduction to professional makeup. Perfect for beginners looking to get started in the beauty industry.',
     curriculum: ['Makeup Basics', 'Product Knowledge', 'Face Contouring', 'Makeup Application', 'Portfolio Building'],
@@ -79,7 +72,6 @@ const courses = [
   {
     title: 'Short-term Hair Styling Workshop',
     duration: '1 Month',
-    fees: '₹4,500',
     level: 'Beginner',
     description: 'Gain essential hair styling skills in a condensed format. Learn basic cutting and styling from experienced professionals.',
     curriculum: ['Hair Care Basics', 'Basic Cutting', 'Styling Tips', 'Product Knowledge', 'Safety & Hygiene'],

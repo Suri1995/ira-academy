@@ -99,7 +99,13 @@ export default function Page() {
               </div>
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl bg-background flex items-center justify-center border border-border">
-              <img src="/logo.png" alt="IRA Beauty Academy Logo" className="h-full w-auto object-contain p-8" />
+              {/* Logo height set to 70px as requested */}
+              <img 
+                src="/logo.png" 
+                alt="IRA Beauty Academy Logo" 
+                style={{ height: '80px' }} 
+                className="w-auto object-contain p-2"   
+              />
             </div>
           </div>
         </div>
