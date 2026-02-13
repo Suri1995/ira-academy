@@ -1,10 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 import { Star, CheckCircle, Users, Award, Sparkles, MessageCircle } from 'lucide-react'
+import CTAImage from "@/public/cta-image.webp"
 
 const highlights = [
   { icon: CheckCircle, title: 'Certified Trainers', description: 'Learn from industry experts' },
@@ -17,25 +19,25 @@ const courses = [
   {
     title: 'Professional Makeup Course',
     duration: '3 Months',
-    image: 'makeup',
+    image: '/make-up-artist-image.jpg',
     description: 'Master bridal, party, and everyday makeup techniques'
   },
   {
     title: 'Hair Styling & Dressing',
     duration: '2.5 Months',
-    image: 'hair',
+    image: '/female-making-hairstyle.jpg',
     description: 'Learn cutting, styling, and coloring expertise'
   },
   {
     title: 'Skin & Cosmetology',
     duration: '3 Months',
-    image: 'skin',
+    image: '/professional-skin-care-therapy.jpg',
     description: 'Professional skincare and facial treatments'
   },
   {
     title: 'Nail Art & Extensions',
     duration: '1.5 Months',
-    image: 'nails',
+    image: '/nail-extensions.jpg',
     description: 'Master nail design and extension techniques'
   },
 ]
@@ -98,21 +100,28 @@ export default function Page() {
                 </button>
               </div>
             </div>
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl bg-background flex items-center justify-center border border-border">
-              {/* Logo height set to 70px as requested */}
-              <img 
-                src="/logo.png" 
-                alt="IRA Beauty Academy Logo" 
-                style={{ height: '80px' }} 
-                className="w-auto object-contain p-2"   
-              />
-            </div>
+            <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border border-border bg-black">
+
+  <div className="relative w-full aspect-video">
+    <video
+      className="absolute inset-0 w-full h-full object-cover"
+      src="/ira-video.mp4"
+      autoPlay
+      muted
+      loop
+      playsInline
+      controls
+      preload="metadata"
+    />
+  </div>
+
+</div>
           </div>
         </div>
       </section>
 
       {/* Highlights Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Why Choose IRA Beauty Academy?</h2>
@@ -124,7 +133,7 @@ export default function Page() {
               return (
                 <div
                   key={index}
-                  className="bg-card rounded-2xl p-8 shadow-sm border border-border hover:shadow-md transition-shadow"
+                  className="bg-card hover:bg-indigo-50 rounded-2xl p-8 shadow-sm border border-border hover:shadow-md transition-shadow"
                 >
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <Icon className="text-primary" size={24} />
@@ -151,12 +160,15 @@ export default function Page() {
                 key={index}
                 className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border hover:shadow-lg hover:-translate-y-1 transition-all"
               >
-                <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <div className="text-center">
-                    <Sparkles size={48} className="mx-auto text-primary mb-2" />
-                    <p className="text-foreground/60 text-sm">{course.image}</p>
-                  </div>
-                </div>
+<div className="h-48 relative overflow-hidden group rounded-t-2xl">
+  <Image
+    src={course.image}
+    alt={course.title}
+    fill
+    className="object-cover transition-transform duration-500 group-hover:scale-110"
+    sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 25vw"
+  />
+</div>
                 <div className="p-6">
                   <h3 className="font-semibold text-foreground mb-2 line-clamp-2">{course.title}</h3>
                   <p className="text-primary font-semibold text-sm mb-3">{course.duration}</p>
@@ -209,24 +221,50 @@ export default function Page() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary/80">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">Stay Updated</h2>
-          <p className="text-primary-foreground/90 mb-8 text-balance">Subscribe to get updates about new courses and special offers</p>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 px-6 py-3 rounded-full bg-white text-foreground placeholder:text-foreground/50 focus:outline-none"
-            />
-            <button className="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
+      <section className="py-10 sm:py-20 bg-cyan-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative overflow-hidden rounded-2xl border border-border shadow-sm">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-200 via-cyan-100 to-green-200" />
+      <div className="pointer-events-none absolute -left-20 -top-24 h-72 w-72 rounded-full bg-lime-400/40 blur-2xl" />
+      <div className="pointer-events-none absolute left-24 top-6 h-56 w-56 rounded-full bg-emerald-300/30 blur-2xl" />
+      <div className="pointer-events-none absolute left-40 -bottom-24 h-72 w-72 rounded-full bg-cyan-400/25 blur-2xl" />
+
+      <div className="relative z-10 grid grid-cols-1 items-center gap-6 px-5 py-8 sm:px-10 sm:py-0 sm:pt-3 lg:grid-cols-[280px_1fr_auto] lg:gap-10">
+        {/* Image */}
+        <div className="relative mx-auto h-44 w-44 overflow-hidden sm:h-52 sm:w-52 lg:mx-0 lg:h-56 lg:w-56">
+          <Image
+            src={CTAImage}
+            alt="CTA Image"
+            fill
+            className="object-cover"
+            sizes="(max-width: 640px) 180px, (max-width: 1024px) 220px, 240px"
+            priority
+          />
         </div>
-      </section>
+
+        {/* Content */}
+        <div className="text-center lg:text-left md:w-[500px]">
+          <div className="text-cyan-900 font-inter font-bold tracking-wide text-xs sm:text-sm">
+            GOT QUESTIONS?
+          </div>
+          <h3 className="mt-2 font-inter font-bold text-heading text-lg sm:text-2xl lg:text-3xl leading-snug">
+            Still Have A Question? Get In Touch With Our Team!
+          </h3>
+        </div>
+
+        {/* Button */}
+        <div className="flex justify-center lg:justify-end">
+          <a
+            href="/contact"
+            className="inline-flex items-center justify-center gap-3 rounded-full bg-orange-600 px-6 py-3 text-white font-semibold shadow-sm transition hover:bg-orange-700 active:scale-[0.98] whitespace-nowrap lg:text-[18px]"
+          >
+            REACH OUT TO US
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Floating WhatsApp Button */}
       <a

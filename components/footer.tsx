@@ -1,90 +1,110 @@
-import Link from 'next/link'
-import { Facebook, Instagram, Twitter, MessageCircle } from 'lucide-react'
+import Link from "next/link"
+import { Facebook, Instagram, Youtube, ArrowRight } from "lucide-react"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-foreground text-background py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+<footer className="text-background bg-[linear-gradient(180deg,#1c1c1c,#242424,#1a1a1a)]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex justify-between gap-10">
+          
           {/* Brand */}
-          <div>
-            <img src="/logo.png" alt="IRA Beauty Academy" className="h-24 w-auto mb-4" />
-            <p className="text-sm opacity-80">
+          <div className="lg:col-span-4">
+            <div className="text-2xl sm:text-3xl font-bold tracking-tight">
+              IRA Beauty Academy
+            </div>
+            <p className="mt-3 text-sm leading-relaxed opacity-85 max-w-sm">
               Transforming passion into professional beauty careers since 2025.
             </p>
-          </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/courses" className="hover:text-primary transition-colors">
-                  Courses
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-primary transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/gallery" className="hover:text-primary transition-colors">
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link href="/success-stories" className="hover:text-primary transition-colors">
-                  Success Stories
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-bold mb-4">Contact</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="tel:+919876543210" className="hover:text-primary transition-colors">
-                  +91 9876 543 210 /  +91 8142766813
-                </a>
-              </li>
-              <li>
-                <a href="mailto:info@irabeautyacademy.com" className="hover:text-primary transition-colors">
-                  info@irabeautyacademy.com
-                </a>
-              </li>
-              <li className="text-sm opacity-80">
-                 Chaitanyapuri, Hyderabad, Telangana, India
-              </li>
-            </ul>
-          </div>
-
-          {/* Social Links */}
-          <div>
-            <h3 className="font-bold mb-4">Follow Us</h3>
-            <div className="flex gap-4">
-              <a href="#" className="hover:text-primary transition-colors" aria-label="Facebook">
-                <Facebook size={20} />
+            {/* Social */}
+            <div className="mt-6 flex items-center gap-3">
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-background/10 transition"
+              >
+                <Facebook size={18} />
               </a>
-              <a href="#" className="hover:text-primary transition-colors" aria-label="Instagram">
-                <Instagram size={20} />
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-background/10 transition"
+              >
+                <Instagram size={18} />
               </a>
-              <a href="#" className="hover:text-primary transition-colors" aria-label="Twitter">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="hover:text-primary transition-colors" aria-label="WhatsApp">
-                <MessageCircle size={20} />
+              <a
+                href="#"
+                aria-label="YouTube"
+                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-background/10 transition"
+              >
+                <Youtube size={18} />
               </a>
             </div>
           </div>
-        </div>
 
-        <div className="border-t border-background/20 pt-8">
-          <p className="text-center text-sm opacity-80">
+          {/* Quick Links */}
+          <div className="lg:col-span-4">
+            <h3 className="text-lg font-semibold tracking-wide uppercase opacity-90 text-center">
+              Quick Links
+            </h3>
+            <div className="mt-4 space-y-3 text-sm">
+              {[
+                { label: "Courses", href: "/courses" },
+                { label: "About Us", href: "/about" },
+                { label: "Gallery", href: "/gallery" },
+                { label: "Success Stories", href: "/success-stories" },
+              ].map((item) => (
+                <div key={item.href} className="text-center">
+                  <Link
+                    href={item.href}
+                    className="inline-flex items-center gap-2 opacity-85 hover:opacity-100 hover:text-primary transition"
+                  >
+                    {item.label}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div className="lg:col-span-4">
+            <h3 className="text-lg font-semibold tracking-wide uppercase opacity-90">
+              Contact
+            </h3>
+
+            <div className="mt-4 space-y-3 text-sm">
+              <a
+                href="tel:+919876543210"
+                className="block opacity-85 hover:opacity-100 hover:text-primary transition"
+              >
+                +91 9876 543 210 / +91 8142766813
+              </a>
+
+              <a
+                href="mailto:info@irabeautyacademy.com"
+                className="block opacity-85 hover:opacity-100 hover:text-primary transition"
+              >
+                info@irabeautyacademy.com
+              </a>
+
+              <p className="opacity-75">
+                Chaitanyapuri, Hyderabad, Telangana, India
+              </p>
+              <a href="/privacy-policy" className="block opacity-85 hover:opacity-100 hover:text-primary transition">
+              Privacy Policy
+            </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Bottom */}
+      <div className="border-t border-background/15">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-sm opacity-80">
             © {currentYear} IRA Beauty Academy. All rights reserved.
           </p>
         </div>
