@@ -20,21 +20,24 @@ export function Footer() {
 
             <div className="mt-6 flex items-center gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/share/1KzDHWheJ5/"
+                target="_blank"
                 aria-label="Facebook"
                 className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-background/10 transition"
               >
                 <Facebook size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/ira.beauty.academy/"
+                target="_blank"
                 aria-label="Instagram"
                 className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-background/10 transition"
               >
                 <Instagram size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@IRABeautyAcademy"
+                target="_blank"
                 aria-label="YouTube"
                 className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-background/10 transition"
               >
@@ -78,7 +81,7 @@ export function Footer() {
                 href="tel:+919876543210"
                 className="block opacity-85 hover:opacity-100 hover:text-primary transition"
               >
-                +91 9876 543 210 / +91 8142766813
++918367771295 / 9441681783
               </a>
 
               <a
@@ -140,7 +143,8 @@ export function Footer() {
                   href="tel:+919876543210"
                   className="block opacity-85 hover:opacity-100 hover:text-primary transition"
                 >
-                  +91 9876 543 210 / +91 8142766813
+                  
++918367771295 / 9441681783
                 </a>
 
                 <a

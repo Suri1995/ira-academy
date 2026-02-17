@@ -1,12 +1,14 @@
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
-import { Phone, Mail, MapPin, MessageCircle, Facebook, Instagram, Twitter } from 'lucide-react'
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
+import WhatsappIcon from '@/public/whatsapp-icon.png'
 
 export default function ContactPage() {
   const faqs = [
@@ -82,9 +84,15 @@ export default function ContactPage() {
                 <Phone className="text-primary" size={24} />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">Call Us</h3>
-              <a href="tel:+919876543210" className="text-primary font-semibold hover:underline">
-                +91 9876 543 210
-              </a>
+              <div className="flex flex-col gap-1">
+                <a href="tel:+918367771295" className="text-primary font-semibold hover:underline">
+                  +91 83677 71295
+                </a>
+
+                <a href="tel:+919441681783" className="text-primary font-semibold hover:underline">
+                  +91 94416 81783
+                </a>
+              </div>
               <p className="text-foreground/60 text-sm mt-2">Mon - Fri, 10am - 6pm</p>
             </div>
 
@@ -147,40 +155,62 @@ export default function ContactPage() {
 
             {/* RIGHT - 3 cards */}
             <div className="w-full flex flex-col gap-5">
+              {/* WhatsApp card */}
               <a
-                href="https://wa.me/919876543210"
-                className="flex items-center gap-4 bg-green-500 text-white rounded-2xl p-6 hover:bg-green-600 transition-colors"
+                href="https://wa.me/918367771295"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 bg-green-500 text-white rounded-2xl p-6 hover:bg-green-600 transition-colors group"
               >
-                <MessageCircle size={32} />
+                {/* Icon with pulse */}
+                <div className="relative w-12 h-12 shrink-0">
+                  <span className="absolute inset-0 rounded-full bg-white/40 animate-ping"></span>
+
+                  <div className="relative w-full h-full rounded-full bg-white flex items-center justify-center">
+                    <Image
+                      src={WhatsappIcon}
+                      alt="WhatsappIcon"
+                      fill
+                      className="object-contain p-2"
+                      priority
+                    />
+                  </div>
+                </div>
+
+                {/* Text */}
                 <div>
                   <p className="font-bold">Chat on WhatsApp</p>
                   <p className="text-sm opacity-90">Quick response guaranteed</p>
                 </div>
               </a>
 
+              {/* Social Links (✅ removed Twitter, ✅ added YouTube, same UI) */}
               <div className="bg-card rounded-2xl p-6 border border-border">
                 <h3 className="font-bold text-foreground mb-4">Follow Us</h3>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/share/1KzDHWheJ5/"
+                    target='_blank'
                     className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                     aria-label="Facebook"
                   >
                     <Facebook size={20} />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/ira.beauty.academy/"
+                    target='_blank'
                     className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                     aria-label="Instagram"
                   >
                     <Instagram size={20} />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.youtube.com/@IRABeautyAcademy"
+                    target='_blank'
                     className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                    aria-label="Twitter"
+                    aria-label="YouTube"
                   >
-                    <Twitter size={20} />
+                    <Youtube size={20} />
                   </a>
                 </div>
               </div>
@@ -272,6 +302,33 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      {/* Floating WhatsApp Button (Image Icon) */}
+<a
+  href="https://wa.me/918367771295"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-20 right-6 z-50 group"
+  aria-label="Chat on WhatsApp"
+>
+  <div className="relative w-[64px] h-[64px] rounded-full shadow-2xl hover:scale-110 transition-transform duration-300">
+
+    {/* pulse ring */}
+    <span className="absolute inset-0 rounded-full bg-green-500/40 animate-ping"></span>
+
+    {/* main circle */}
+    <div className="relative w-full h-full rounded-full bg-white flex items-center justify-center border-4 border-green-500">
+
+      <Image
+        src={WhatsappIcon}
+        alt="Whatsapp Icon"
+        fill
+        className="object-contain p-2"
+        priority
+      />
+
+    </div>
+  </div>
+</a>
 
       <Footer />
     </div>

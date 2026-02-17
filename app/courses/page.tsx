@@ -22,6 +22,7 @@ import HairStyle from "@/public/hairstyling-hairdressing.jpg";
 import NailStylist from "@/public/nail-stylist.jpg";
 import BeauticianCourse from "@/public/beautician-course.jpg";
 import MakeupArtist from "@/public/makeup-artist.jpg";
+import WhatsappIcon from "@/public/whatsapp-icon.png"
 
 /* ----------------------------- BlurText (same file) ----------------------------- */
 const buildKeyframes = (from: Record<string, any>, steps: Record<string, any>[]) => {
@@ -560,6 +561,33 @@ export default function CoursesPage() {
           </div>
         </div>
       </section>
+      {/* Floating WhatsApp Button (Image Icon) */}
+<a
+  href="https://wa.me/918367771295"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-20 right-6 z-50 group"
+  aria-label="Chat on WhatsApp"
+>
+  <div className="relative w-[64px] h-[64px] rounded-full shadow-2xl hover:scale-110 transition-transform duration-300">
+
+    {/* pulse ring */}
+    <span className="absolute inset-0 rounded-full bg-green-500/40 animate-ping"></span>
+
+    {/* main circle */}
+    <div className="relative w-full h-full rounded-full bg-white flex items-center justify-center border-4 border-green-500">
+
+      <Image
+        src={WhatsappIcon}
+        alt="Whatsapp Icon"
+        fill
+        className="object-contain p-2"
+        priority
+      />
+
+    </div>
+  </div>
+</a>
 
       <Footer />
     </div>
