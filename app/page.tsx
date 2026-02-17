@@ -75,26 +75,26 @@ export default function Page() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="mt-16 min-h-[600px] bg-gradient-to-br from-primary/5 via-background to-secondary/5 flex items-center">
+      <section className="min-h-[600px] bg-[linear-gradient(to_right,hsl(43_74%_45%)_0%,hsl(43_74%_60%)_35%,hsl(43_74%_72%)_50%,hsl(43_74%_60%)_65%,hsl(43_74%_45%)_100%)] flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-balance">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              <h1 className="text-4xl sm:text-[52px] font-bold text-orange-900 mb-6 leading-none">
                 Transform Your Passion into a Professional Beauty Career
               </h1>
-              <p className="text-lg text-foreground/70 mb-8 text-balance">
+              <p className="text-lg text-black font-medium mb-8 text-balance">
                 Beauty courses, certifications, and hands-on training with certified trainers. Get 100% placement assistance and affordable fees.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity text-center"
+                  className="bg-white text-black hover:bg-amber-950 hover:text-white px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity text-center"
                 >
                   Enroll Now
                 </Link>
                 <button
                   onClick={handleDemo}
-                  className="border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold hover:bg-primary/5 transition-colors"
+                  className="border-2 border-white text-white hover:border-amber-950 hover:text-amber-950 px-8 py-3 rounded-full font-semibold hover:bg-primary/5 transition-colors"
                 >
                   Book Free Demo
                 </button>
@@ -258,7 +258,7 @@ export default function Page() {
             href="/contact"
             className="inline-flex items-center justify-center gap-3 rounded-full bg-orange-600 px-6 py-3 text-white font-semibold shadow-sm transition hover:bg-orange-700 active:scale-[0.98] whitespace-nowrap lg:text-[18px]"
           >
-            REACH OUT TO US
+            Reach Us
           </a>
         </div>
       </div>
