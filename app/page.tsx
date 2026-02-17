@@ -268,7 +268,7 @@ export default function Page() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/919876543210"
+        href="https://wa.me/918367771295"
         className="fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition-colors z-40"
         aria-label="Chat on WhatsApp"
       >
